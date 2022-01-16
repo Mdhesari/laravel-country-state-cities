@@ -13,7 +13,7 @@ class CreateCitiesMigration extends Migration
      */
     public function up()
     {
-        DB::unprepared(file_get_contents(database_path('dump/cities.sql')));
+        \DB::unprepared(__DIR__ . '/../../database/dump/cities.sql');
     }
 
     /**
