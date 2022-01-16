@@ -17,7 +17,6 @@ composer require mdhesari/laravel-country-state-cities
 ## Usage
 
 ```bash
-// Usage description here
 php artisan migrate
 ```
 
