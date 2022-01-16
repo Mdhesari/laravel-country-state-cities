@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Mdhesari\LaravelCountryStateCities\Http\Controllers;
 
-use App\Models\Country;
-use App\Models\State;
+use Mdhesari\LaravelCountryStateCities\Models\Country;
+use Mdhesari\LaravelCountryStateCities\Models\State;
 
 class StateController extends Controller
 {

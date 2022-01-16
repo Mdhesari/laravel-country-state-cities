@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Mdhesari\LaravelCountryStateCities\Http\Controllers;
 
-use App\Models\City;
-use App\Models\State;
+use Illuminate\Routing\Controller;
+use Mdhesari\LaravelCountryStateCities\Models\City;
+use Mdhesari\LaravelCountryStateCities\Models\State;
 use Illuminate\Http\Request;
 
 class CityController extends Controller

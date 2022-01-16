@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Mdhesari\LaravelCountryStateCities\Http\Controllers;
 
-use App\Models\Country;
+use Mdhesari\LaravelCountryStateCities\Models\Country;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller

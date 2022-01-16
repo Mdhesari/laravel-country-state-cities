@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Models;
+namespace Mdhesari\LaravelCountryStateCities\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-    use HasFactory;
-
     protected $casts = [
         'translations' => 'array',
         'timezones' => 'array',
