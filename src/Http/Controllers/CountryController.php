@@ -2,6 +2,7 @@
 
 namespace Mdhesari\LaravelCountryStateCities\Http\Controllers;
 
+use Illuminate\Routing\Controller;
 use Mdhesari\LaravelCountryStateCities\Models\Country;
 use Illuminate\Http\Request;
 
