@@ -13,7 +13,7 @@ class CreateStatesMigration extends Migration
      */
     public function up()
     {
-        \DB::unprepared(__DIR__ . '/../../database/dump/states.sql');
+        \DB::unprepared(file_get_contents(__DIR__ . '/../../database/dump/states.sql'));
     }
 
     /**
