@@ -21,7 +21,7 @@ class CityController extends Controller
         $query = $state->cities()->query();
 
         if ($request->has('s')) {
-            $query->where('name', 'like', '*' . $request->get('s') . '*');
+            $query->where('name', 'like', '%' . $request->get('s') . '%');
         }
 
         return api()->success(null, [

@@ -19,7 +19,7 @@ class CountryController extends Controller
         $query = Country::query();
 
         if ($request->has('s')) {
-            $query->where('name', 'like', '*' . $request->get('s') . '*');
+            $query->where('name', 'like', '%' . $request->get('s') . '%');
         }
 
         return api()->success(null, [
