@@ -2,6 +2,7 @@
 
 namespace Mdhesari\LaravelCountryStateCities\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Mdhesari\LaravelCountryStateCities\Models\Country;
 use Mdhesari\LaravelCountryStateCities\Models\State;
@@ -15,10 +16,16 @@ class StateController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @group Country-Cities
      */
-    public function index(Country $country): \Illuminate\Http\JsonResponse
+    public function index(Request $request, Country $country): \Illuminate\Http\JsonResponse
     {
+        $query = $country->states()->query();
+
+        if ($request->has('s')) {
+            $query->where('name', 'like', '*' . $request->get('s') . '*');
+        }
+
         return api()->success(null, [
-            'item' => $country->states()->get(),
+            'items' => $query->paginate($request->get('per_page', 16)),
         ]);
     }
 

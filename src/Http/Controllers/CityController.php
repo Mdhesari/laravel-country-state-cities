@@ -16,10 +16,16 @@ class CityController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @group Country-Cities
      */
-    public function index(State $state): \Illuminate\Http\JsonResponse
+    public function index(Request $request, State $state): \Illuminate\Http\JsonResponse
     {
+        $query = $state->cities()->query();
+
+        if ($request->has('s')) {
+            $query->where('name', 'like', '*' . $request->get('s') . '*');
+        }
+
         return api()->success(null, [
-            'item' => $state->cities()->get(),
+            'items' => $query->paginate($request->get('per_page', 16)),
         ]);
     }
 
