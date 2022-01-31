@@ -18,7 +18,7 @@ class StateController extends Controller
      */
     public function index(Request $request, Country $country): \Illuminate\Http\JsonResponse
     {
-        $query = $country->states()->query();
+        $query = $country->states();
 
         if ($request->has('s')) {
             $query->where('name', 'like', '%' . $request->get('s') . '%');

@@ -18,7 +18,7 @@ class CityController extends Controller
      */
     public function index(Request $request, State $state): \Illuminate\Http\JsonResponse
     {
-        $query = $state->cities()->query();
+        $query = $state->cities();
 
         if ($request->has('s')) {
             $query->where('name', 'like', '%' . $request->get('s') . '%');
