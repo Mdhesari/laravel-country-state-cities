@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "mdhesari/api-response": "^0.9.7",
+        "mdhesari/api-response": "^0.9",
         "illuminate/support": "^8.0"
     },
     "require-dev": {
